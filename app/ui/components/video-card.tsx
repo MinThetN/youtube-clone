@@ -25,9 +25,10 @@ export function VideoCard() {
                         <h6 className="text-gray-500">1M views</h6>
                         <p className="text-gray-500">5 hours ago</p>
                     </div>
-
-                    <Button as={Link} href={`/watch/3`}> Watch </Button>
                 </div>
+            </div>
+            <div className="bg-slate-300 w-full">
+                <Button as={Link} href={`/watch/3`}> Watch </Button>
             </div>
         </div>
     );
