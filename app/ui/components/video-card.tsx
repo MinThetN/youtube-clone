@@ -23,8 +23,8 @@ export function VideoCard({ video }: any) {
             <div className=" flex gap-3 mt-3">
                 <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
                 <div className="">
-                    <h6 className="font-bold">Jhon doe</h6>
-                    <h6>Min Thet Naung</h6>
+                    <h6 className="font-bold">{video.title}</h6>
+                    <h6>{video.description}</h6>
 
                     <div className="flex gap-3 text-sm">
                         <h6 className="text-gray-500">1M views</h6>
@@ -33,7 +33,7 @@ export function VideoCard({ video }: any) {
                 </div>
             </div>
             <div className="w-full flex justify-end">
-                <Button className="" as={Link} href={`/watch/3`}> Watch </Button>
+                <Button className="" as={Link} href={`/watch/${video.videoId}`}> Watch </Button>
             </div>
         </div>
     );

@@ -1,7 +1,22 @@
+"use client"
 import { Avatar } from "@heroui/react";
-import Link from "next/link";
+import { useQuery } from "@tanstack/react-query";
 
  export default function DetailVideo({ params } : any){
+
+    const { isPending, error, data } = useQuery({
+        queryKey: ['singleVideo'],
+        queryFn: () =>
+          fetch(`/api/video/${params.id}`).then((res) =>
+            res.json(),
+          ),
+      })
+    
+      if (isPending) return 'Loading...'
+    
+      if (error) return 'An error has occurred: ' + error.message
+    
+
     return (
         <div className="p-5"> 
             {/* DetailVideo {params.id} use params.id to set dynamic */}
@@ -12,7 +27,7 @@ import Link from "next/link";
                     <iframe 
                     // aspect-video to make the video card aspect ratio
                     className="aspect-video w-full rounded-xl"
-                    src="https://www.youtube.com/embed/hIwGBOexa5w?si=BtDyxzvSjt7oz-UM"
+                    src={`https://www.youtube.com/embed/${data.videoId}`}
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
