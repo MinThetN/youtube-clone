@@ -1,13 +1,18 @@
 import { Avatar, Button, Link } from "@heroui/react";
 
-export function VideoCard() {
+export function VideoCard({ video }: any) {
     return (
         <div className="border-2 p-3 rounded-2xl border-gray-400 hover:bg-gray-200 transition delay-100">
+
+            <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+            <code className="text-white">{JSON.stringify(video, null, 2)}</code>
+            </pre>
+
             <div className="">
                 <iframe 
                 // aspect-video to make the video card aspect ratio
                 className="aspect-video w-full rounded-xl"
-                src="https://www.youtube.com/embed/hIwGBOexa5w?si=BtDyxzvSjt7oz-UM"
+                src={`https://www.youtube.com/embed/${video.videoId}`}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -27,8 +32,8 @@ export function VideoCard() {
                     </div>
                 </div>
             </div>
-            <div className="bg-slate-300 w-full">
-                <Button as={Link} href={`/watch/3`}> Watch </Button>
+            <div className="w-full flex justify-end">
+                <Button className="" as={Link} href={`/watch/3`}> Watch </Button>
             </div>
         </div>
     );
