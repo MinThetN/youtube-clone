@@ -4,9 +4,9 @@ export function VideoCard({ video }: any) {
     return (
         <div className="border-2 p-3 rounded-2xl border-gray-400 hover:bg-gray-200 transition delay-100">
 
-            <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+            {/* <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
             <code className="text-white">{JSON.stringify(video, null, 2)}</code>
-            </pre>
+            </pre> */}
 
             <div className="">
                 <iframe 
