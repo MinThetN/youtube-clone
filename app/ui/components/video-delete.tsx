@@ -30,7 +30,7 @@ export function VideoDelete({id}: any){
     return (
         <form onSubmit={onSubmit}> 
             <Button type="submit" isLoading={mutation.isPending} isDisabled={mutation.isPending} color="danger"
-            className="mt-4  text-white font-bold py-2 px-4 rounded-xl">
+            className="ml-2 text-white font-bold py-2 px-4 rounded-xl">
                 Delete
             </Button>
         </form>
