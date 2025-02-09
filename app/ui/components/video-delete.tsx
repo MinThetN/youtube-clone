@@ -9,7 +9,7 @@ export function VideoDelete({id}: any){
 
     const mutation = useMutation({
         mutationFn: (formData: any) => {
-            return fetch ("api/video", {
+            return fetch ("/api/video", {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -19,7 +19,6 @@ export function VideoDelete({id}: any){
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ["videoData"] });
-            alert('Done')
         }
     });
 

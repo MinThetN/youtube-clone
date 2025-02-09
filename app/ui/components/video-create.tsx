@@ -26,7 +26,7 @@ export function VideoCreateForm(){
     });
 
     const onSubmit = (e: any) => {
-        e.preventDefault(); // not to be loading
+        // e.preventDefault(); // not to be loading
         mutation.mutate({title, description, videoId}) // (4) get data from (3)
     }
 
