@@ -1,4 +1,5 @@
 import { Avatar, Button, Link } from "@heroui/react";
+import { VideoDelete } from "./video-delete";
 
 export function VideoCard({ video }: any) {
     return (
@@ -34,6 +35,7 @@ export function VideoCard({ video }: any) {
             </div>
             <div className="w-full flex justify-end">
                 <Button className="" as={Link} href={`/watch/${video.videoId}`}> Watch </Button>
+                <VideoDelete id={video.id} />
             </div>
         </div>
     );

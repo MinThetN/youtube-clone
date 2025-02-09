@@ -27,3 +27,14 @@ export async function POST(req: NextRequest, res: NextResponse) {
     return NextResponse.json(toCreate);
 
 }
+
+export async function DELETE(req: NextRequest, res: NextResponse) {
+    const wow = await req.json(); // request data
+    const toCreate = await db.video.delete({
+        where: {
+            id: wow.id,
+        }
+    })
+    return NextResponse.json(toCreate);
+
+}
