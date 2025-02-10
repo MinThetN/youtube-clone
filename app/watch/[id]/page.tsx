@@ -1,6 +1,8 @@
 "use client"
+
 import { Avatar, Button } from "@heroui/react";
 import { useQuery } from "@tanstack/react-query";
+import Link from "next/link";
 
  export default function DetailVideo({ params } : any){
 
@@ -24,7 +26,7 @@ import { useQuery } from "@tanstack/react-query";
             
             {/* video */}
 
-            <Button>back</Button>
+            <Button className="" as={Link} href='/' passHref> Back </Button>
 
             <div className="w-9/12">
                 <div className="">

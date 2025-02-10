@@ -28,8 +28,7 @@ export function VideoCard({ video }: any) {
                     <h6>{video.description}</h6>
 
                     <div className="flex gap-3 text-sm">
-                        <h6 className="text-gray-500">1M views</h6>
-                        <p className="text-gray-500">5 hours ago</p>
+                        <p></p>
                     </div>
                 </div>
             </div>

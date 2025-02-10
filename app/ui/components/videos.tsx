@@ -16,7 +16,7 @@ export default function Videos() {
       if (error) return 'An error has occurred: ' + error.message
 
     return (
-      <div className="grid grid-cols-4 gap-4 mt-4">
+      <div className="grid grid-cols-3 gap-3 mt-4">
 
         {data.map((video: any) => (
             <VideoCard key={video.id} video = {video} />
