@@ -1,5 +1,5 @@
 "use client"
-import { Avatar } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import { useQuery } from "@tanstack/react-query";
 
  export default function DetailVideo({ params } : any){
@@ -18,11 +18,15 @@ import { useQuery } from "@tanstack/react-query";
     
 
     return (
-        <div className="p-5"> 
+    
+        <div className="p-5 flex gap-2 "> 
             {/* DetailVideo {params.id} use params.id to set dynamic */}
             
             {/* video */}
-            <div className="">
+
+            <Button>back</Button>
+
+            <div className="w-9/12">
                 <div className="">
                     <iframe 
                     // aspect-video to make the video card aspect ratio
@@ -50,7 +54,7 @@ import { useQuery } from "@tanstack/react-query";
             </div>
 
             {/* comments */}
-            <div className=""></div>
+            <div className=""> comments </div>
 
         </div>
     );

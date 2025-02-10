@@ -33,7 +33,7 @@ export function VideoCard({ video }: any) {
                     </div>
                 </div>
             </div>
-            <div className="w-full flex justify-end">
+            <div className="w-full flex justify-end mt-3">
                 <Button className="" as={Link} href={`/watch/${video.videoId}`}> Watch </Button>
                 <VideoDelete id={video.id} />
             </div>
